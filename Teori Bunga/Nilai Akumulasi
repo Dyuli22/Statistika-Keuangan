@@ -1,0 +1,20 @@
+nilaiakumulasi=function(num,k,i,t,m=TRUE){
+#num= pilihan, 1= tunggal, 2= majemuk biasa dan majemuk nominal, 3=majemuk kontinu
+#k= modal atau uang pokok
+#i= indeks atau bunga (dalam bentuk desimalnya) 
+#t= waktu tahun
+#m = banyaknya pemberian bunga dalam satu tahun
+  switch(num,
+         satu={
+           At=k*(1+i*t)
+           cat("Nilai Akumulasi Bunga Tunggal: ", At)
+         },
+         dua={
+           At=k*(1+i/m)^(m*t)
+           cat("Nilai Akumulasi Bunga Majemuk Nominal: ", At)
+         },
+         tiga={
+           At=k*exp(i*t)
+           cat("Nilai Akumulasi Bunga Majemuk Kontinu: ", At)
+         })
+  }
