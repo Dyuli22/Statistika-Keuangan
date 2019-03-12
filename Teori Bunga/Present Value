@@ -1,0 +1,10 @@
+presentvalue<-function(num,At,i,t,m=TRUE){
+  switch(num,
+         satu={PV=At/(1+i*t)
+            cat("Nilai Present Value Bunga Tunggal:",PV)},
+         dua={PV=At/(1+(i/m))^(m*t)
+            cat("Nilai Present Value Bunga Majemuk Nominal / Biasa:",PV)},
+        tiga={PV=At*exp(-i*t)
+            cat("Nilai Present Value Bunga Majemuk Kontinu:",PV)}
+)
+}
