@@ -1,0 +1,19 @@
+cicilan<-function(num,tot,i,t,m=TRUE){
+#tot= an atau sn
+  n=m*t
+  j=i/m
+  v=(1+j)^-1
+  switch(num,
+         satu={
+           kan=tot*j/(1-v^n)
+           ksn=tot*j/((1+j)^n-1)
+           cat(" Cicilan untuk Present Value Annuitas akhir: ",kan,"\n")
+           cat("Cician untuk Nilai Akumulasi Annuitas akhir: ",ksn)
+         },
+         dua={
+           kan=tot*(j*v)/(1-v^n)
+           ksn=tot*(j*v)/((1+j)^n-1)
+           cat("Cicilan untuk Present Value  annuitas awal: ",kan,"\n" )
+           cat("Cicilan untuk Nilai Akumulasi  annuitas awal: ",ksn)
+         })
+}
